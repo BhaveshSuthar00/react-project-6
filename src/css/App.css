@@ -1,0 +1,16 @@
+.container {
+    display: flex;
+    justify-content: space-between;
+}
+.container>div:first-child {
+    width: 28%;
+    margin-left: 2%;
+    margin-top: 2%;
+}
+.container>div:last-child {
+    margin-right: 1%;
+    margin-top: 3%;
+    width: 64%;
+    margin-left: 1%;
+    font-size : 20px;
+}

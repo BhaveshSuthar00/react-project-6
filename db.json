@@ -1,0 +1,13 @@
+{
+  "users": [
+    {
+      "name": "Bhavesh Suthar",
+      "age": "232",
+      "address": "room n0 :- 5/3 lalita devi pandey chawl",
+      "department": "Sales",
+      "salary": "23232",
+      "married": "married",
+      "id": "79d072c1-ccb2-4b33-b9e2-b6cdead246fe"
+    }
+  ]
+}
