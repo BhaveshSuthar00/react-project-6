@@ -29,15 +29,15 @@ const Forminput = () => {
             ...form,
             [id] : value
         })
-        console.log(form)
     }
     const submitFunction = (e) => {
         if(form.name === "" || form.age === "" || form.address === "" || form.department === "" || form.salary === ""){
             alert("Please enter details")
             return;
         }
-        axios.post('http://localhost:3007/users', {...form, id : uuid()});
+        axios.post('https://face-server-app2323.herokuapp.com/users', {...form, id : uuid()});
     }
+    
     return (
     <form className="form">
         <p>Name</p>
@@ -47,7 +47,7 @@ const Forminput = () => {
         <p>Address</p>
         <input id='address'type="text" placeholder="Enter Address" onChange={(e)=>{handleForm(e)}}/>
         <p>Department</p>
-        <select  id="department" onChange={(e)=>{handleForm(e)}}>
+        <select  id="department" onChange={(e)=>{handleForm(e)}} >
             <option value="Marketing">
                 Marketing
             </option>
@@ -62,11 +62,13 @@ const Forminput = () => {
         <input id='salary' type="number" placeholder="Salary" onChange={(e)=>{handleForm(e)}}/>
         <div>
             <input type="checkbox" id="married" value="married" onClick={(e)=> {handleForm(e)}} />
-            <label htmlFor="married" onClick={()=> {setIsChecked(true)}}>
+            <label htmlFor="married" onClick={()=> {
+                setIsChecked(true)
+            }}>
                 Married 
             </label>
-            <input type="checkbox"  id="married" name="not_married" />
-            <label htmlFor="not_married" onClick={()=> {setIsChecked(false)}}>
+            <input type="checkbox"  id="married2" value="not Married" name="not_married" />
+            <label htmlFor="married2" onClick={()=> {setIsChecked(false)}}>
                 Not-married
             </label>
         </div>

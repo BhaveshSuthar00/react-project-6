@@ -7,7 +7,7 @@ const Forms = () => {
     const [data, setData] = useState([]);
     const ggetall = async () => {
         try { 
-            const data = await axios.get('http://localhost:3007/users');
+            const data = await axios.get('https://face-server-app2323.herokuapp.com/users');
             setData(data.data);
         }
         catch (e) {
@@ -21,8 +21,8 @@ const Forms = () => {
         }
     },[])
     const handleDelete = (id) => {
-        axios.delete(`http://localhost:3007/users/${id}`).then(() => {
-            axios.get('http://localhost:3007/users').then((response) => {
+        axios.delete(`https://face-server-app2323.herokuapp.com/users/${id}`).then(() => {
+            axios.get('https://face-server-app2323.herokuapp.com/users').then((response) => {
                 const data = response.data
                 setData(data);
             }).catch((err) => {
